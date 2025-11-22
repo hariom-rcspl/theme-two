@@ -1,0 +1,17 @@
+export const SAMPLE_USERS = [
+    { id: 1, name: "John Doe", email: "john@example.com", role: "Admin", status: "Active" },
+    { id: 2, name: "Jane Smith", email: "jane@example.com", role: "User", status: "Active" },
+    { id: 3, name: "Bob Johnson", email: "bob@example.com", role: "User", status: "Inactive" },
+    { id: 4, name: "Alice Brown", email: "alice@example.com", role: "Editor", status: "Active" },
+    { id: 5, name: "Charlie Wilson", email: "charlie@example.com", role: "User", status: "Active" },
+    { id: 6, name: "Diana Lee", email: "diana@example.com", role: "Admin", status: "Active" },
+    { id: 7, name: "Eve Martinez", email: "eve@example.com", role: "User", status: "Inactive" },
+    { id: 8, name: "Frank Taylor", email: "frank@example.com", role: "Editor", status: "Active" },
+    { id: 9, name: "Grace Chen", email: "grace@example.com", role: "User", status: "Active" },
+    { id: 10, name: "Henry White", email: "henry@example.com", role: "User", status: "Active" },
+    { id: 11, name: "Iris Green", email: "iris@example.com", role: "Editor", status: "Active" },
+    { id: 12, name: "Jack Moore", email: "jack@example.com", role: "User", status: "Inactive" },
+    { id: 13, name: "Karen Davis", email: "karen@example.com", role: "Admin", status: "Active" },
+    { id: 14, name: "Leo Harris", email: "leo@example.com", role: "User", status: "Active" },
+    { id: 15, name: "Mia Clark", email: "mia@example.com", role: "Editor", status: "Active" },
+]
