@@ -1,7 +1,6 @@
 import { ChartAreaInteractive } from "@/components/ChartAreaInteractive"
 import { HorizontalBarChart } from "@/components/HorizontalBarChart"
 import { PieChartEx } from "@/components/PieChartEx"
-import { SalesChart } from "@/components/SalesChart"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"

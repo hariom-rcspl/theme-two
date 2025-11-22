@@ -14,7 +14,9 @@ import {
     SidebarProvider,
     SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { BellDotIcon, BellIcon } from "lucide-react";
+import { BellDotIcon } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 export default function DashboardLayout() {
     const { pathname } = useLocation();
@@ -78,7 +80,20 @@ export default function DashboardLayout() {
                         </Breadcrumb>
                     </div>
                     <div>
-                        <BellDotIcon size={18}/>
+                        <DropdownMenu modal={false}>
+                            <DropdownMenuTrigger asChild>
+                                <Button variant="outline" aria-label="Open menu" size="icon-sm">
+                                    <BellDotIcon />
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent className="w-72 z-9999" align="end">
+                                <DropdownMenuLabel>Notification 1</DropdownMenuLabel>
+                                <DropdownMenuLabel>Notification 2</DropdownMenuLabel>
+                                <DropdownMenuLabel>Notification 3</DropdownMenuLabel>
+                                <DropdownMenuLabel>Notification 4</DropdownMenuLabel>
+                                <DropdownMenuLabel>Notification 5</DropdownMenuLabel>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
                     </div>
                 </header>
                 <div className="p-5 flex-1">
