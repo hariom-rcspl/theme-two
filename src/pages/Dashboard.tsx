@@ -1,11 +1,15 @@
 import { ChartAreaInteractive } from "@/components/ChartAreaInteractive"
+import { HorizontalBarChart } from "@/components/HorizontalBarChart"
+import { PieChartEx } from "@/components/PieChartEx"
+import { SalesChart } from "@/components/SalesChart"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { VerticalBarChart } from "@/components/VerticalBarChart"
 import { SAMPLE_USERS } from "@/helpers/data"
-import { ChevronLeft, ChevronRight, Search } from "lucide-react"
+import { ChevronLeft, ChevronRight, Coins, Mail, Search, User, Users } from "lucide-react"
 import { useMemo, useState } from "react"
 
 const Dashboard = () => {
@@ -47,7 +51,55 @@ const Dashboard = () => {
     }
     return (
         <div>
+            <div className="grid grid-cols-1 md:grid-cols-4 mb-3 gap-4">
+                <div className="flex p-2 shadow flex-col gap-1 rounded">
+                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow">
+                        <Mail size={15} color="purple" />
+                    </div>
+                    <p className="text-sm font-semibold">Users Subscribe</p>
+                    <p className="font-bold text-2xl">5,989</p>
+                </div>
+
+                <div className="flex p-2 shadow flex-col gap-1 rounded">
+                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow">
+                        <Users size={15} color="red" />
+                    </div>
+                    <p className="text-sm font-semibold">Total Members</p>
+                    <p className="font-bold text-2xl">9k</p>
+                </div>
+
+                <div className="flex p-2 shadow flex-col gap-1 rounded">
+                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow">
+                        <User size={15} color="blue" />
+                    </div>
+                    <p className="text-sm font-semibold">New Members</p>
+                    <p className="font-bold text-2xl">2091</p>
+                </div>
+
+                <div className="flex p-2 shadow flex-col gap-1 rounded">
+                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow">
+                        <Coins size={15} color="orange" />
+                    </div>
+                    <p className="text-sm font-semibold">Total Revenue</p>
+                    <p className="font-bold text-2xl">$10,24,999.75</p>
+                </div>
+            </div>
+
             <ChartAreaInteractive />
+
+            <div className="grid mt-5 grid-cols-3 gap-4">
+                <div>
+                    <PieChartEx />
+                </div>
+                <div>
+                    <HorizontalBarChart />
+                </div>
+                <div>
+                    <VerticalBarChart />
+                </div>
+
+            </div>
+
             <Card className="w-full p-6 mt-5">
                 <div className="flex flex-col gap-4">
                     <h2 className="text-3xl font-bold">Customers</h2>
@@ -134,6 +186,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </Card>
+
         </div>
     )
 }

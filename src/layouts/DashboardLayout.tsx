@@ -14,6 +14,7 @@ import {
     SidebarProvider,
     SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { BellDotIcon, BellIcon } from "lucide-react";
 
 export default function DashboardLayout() {
     const { pathname } = useLocation();
@@ -23,8 +24,8 @@ export default function DashboardLayout() {
         <SidebarProvider>
             <AppSidebar />
             <SidebarInset>
-                <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 shadow sticky top-0 bg-white z-999">
-                    <div className="flex items-center gap-2 px-4">
+                <header className="flex items-center justify-between h-16 shrink-0 gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 shadow sticky top-0 bg-white z-999 px-4">
+                    <div className="flex items-center gap-2">
                         <SidebarTrigger className="-ml-1" />
                         <Separator
                             orientation="vertical"
@@ -75,7 +76,9 @@ export default function DashboardLayout() {
                                 )}
                             </BreadcrumbList>
                         </Breadcrumb>
-
+                    </div>
+                    <div>
+                        <BellDotIcon size={18}/>
                     </div>
                 </header>
                 <div className="p-5 flex-1">
