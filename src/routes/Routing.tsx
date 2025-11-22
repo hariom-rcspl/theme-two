@@ -1,10 +1,10 @@
 import DashboardLayout from "@/layouts/DashboardLayout"
 import { LoginPage } from "@/module/auth/pages/LoginPage"
+import UserListPage from "@/module/users/pages/UserListPage"
 import Categories from "@/pages/Categories"
 import Dashboard from "@/pages/Dashboard"
 import Products from "@/pages/Products"
 import Reports from "@/pages/Reports"
-import Users from "@/pages/Users"
 import { shallowEqual, useSelector } from "react-redux"
 import { Navigate, Route, Routes } from "react-router-dom"
 
@@ -32,7 +32,7 @@ const Routing = () => {
         <Route element={<DashboardLayout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/reports" element={<Reports />} />
-          <Route path="/users" element={<Users />} />
+          <Route path="/users" element={<UserListPage />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/categories" element={<Categories />} />
 

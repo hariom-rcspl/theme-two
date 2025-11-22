@@ -15,13 +15,20 @@ import {
     SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { BellDotIcon } from "lucide-react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 
 export default function DashboardLayout() {
     const { pathname } = useLocation();
     const paths = pathname.split("/").filter(Boolean);
     let fullPath = "";
+    const notifications = [
+        { msg: "New user registered", time: "2 min ago" },
+        { msg: "Server restarted successfully", time: "10 min ago" },
+        { msg: "Password changed", time: "1 hour ago" },
+        { msg: "New order received", time: "3 hours ago" },
+        { msg: "System maintenance scheduled", time: "Yesterday" },
+    ];
     return (
         <SidebarProvider>
             <AppSidebar />
@@ -83,15 +90,38 @@ export default function DashboardLayout() {
                         <DropdownMenu modal={false}>
                             <DropdownMenuTrigger asChild>
                                 <Button variant="outline" aria-label="Open menu" size="icon-sm">
-                                    <BellDotIcon />
+                                    <BellDotIcon className="h-5 w-5" />
                                 </Button>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent className="w-72 z-9999" align="end">
-                                <DropdownMenuLabel>Notification 1</DropdownMenuLabel>
-                                <DropdownMenuLabel>Notification 2</DropdownMenuLabel>
-                                <DropdownMenuLabel>Notification 3</DropdownMenuLabel>
-                                <DropdownMenuLabel>Notification 4</DropdownMenuLabel>
-                                <DropdownMenuLabel>Notification 5</DropdownMenuLabel>
+
+                            <DropdownMenuContent
+                                className="w-80 max-h-80 overflow-y-auto p-0 z-9999"
+                                align="end"
+                            >
+                                {/* Header */}
+                                <div className="px-4 py-2 border-b">
+                                    <h2 className="font-semibold text-sm">Notifications</h2>
+                                </div>
+
+                                {/* Notification items */}
+                                {notifications.map((item, index) => (
+                                    <DropdownMenuItem
+                                        key={index}
+                                        className="flex flex-col items-start gap-0.5 px-4 py-3 cursor-pointer hover:bg-accent"
+                                    >
+                                        <span className="text-sm font-medium">{item.msg}</span>
+                                        <span className="text-xs text-muted-foreground">{item.time}</span>
+                                    </DropdownMenuItem>
+                                ))}
+
+                                <DropdownMenuSeparator />
+
+                                {/* Footer */}
+                                <DropdownMenuItem
+                                    className="text-center justify-center text-sm font-medium cursor-pointer hover:bg-accent py-2"
+                                >
+                                    View All Notifications
+                                </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
