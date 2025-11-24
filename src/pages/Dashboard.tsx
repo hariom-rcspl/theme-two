@@ -51,32 +51,32 @@ const Dashboard = () => {
     return (
         <div>
             <div className="grid grid-cols-1 md:grid-cols-4 mb-3 gap-4">
-                <div className="flex p-2 shadow flex-col gap-1 rounded">
-                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow">
+                <div className="flex p-2 shadow flex-col gap-1 rounded dark:bg-[#171717]">
+                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow dark:bg-white">
                         <Mail size={15} color="purple" />
                     </div>
                     <p className="text-sm font-semibold">Users Subscribe</p>
                     <p className="font-bold text-2xl">5,989</p>
                 </div>
 
-                <div className="flex p-2 shadow flex-col gap-1 rounded">
-                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow">
+                <div className="flex p-2 shadow flex-col gap-1 rounded dark:bg-[#171717]">
+                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow dark:bg-white">
                         <Users size={15} color="red" />
                     </div>
                     <p className="text-sm font-semibold">Total Members</p>
                     <p className="font-bold text-2xl">9k</p>
                 </div>
 
-                <div className="flex p-2 shadow flex-col gap-1 rounded">
-                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow">
+                <div className="flex p-2 shadow flex-col gap-1 rounded dark:bg-[#171717]">
+                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow dark:bg-white">
                         <User size={15} color="blue" />
                     </div>
                     <p className="text-sm font-semibold">New Members</p>
                     <p className="font-bold text-2xl">2091</p>
                 </div>
 
-                <div className="flex p-2 shadow flex-col gap-1 rounded">
-                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow">
+                <div className="flex p-2 shadow flex-col gap-1 rounded dark:bg-[#171717]">
+                    <div className="flex gap-2 items-center p-1 rounded w-fit shadow dark:bg-white">
                         <Coins size={15} color="orange" />
                     </div>
                     <p className="text-sm font-semibold">Total Revenue</p>

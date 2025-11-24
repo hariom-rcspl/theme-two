@@ -17,6 +17,7 @@ import {
 import { BellDotIcon } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ModeToggle";
 
 export default function DashboardLayout() {
     const { pathname } = useLocation();
@@ -33,7 +34,7 @@ export default function DashboardLayout() {
         <SidebarProvider>
             <AppSidebar />
             <SidebarInset>
-                <header className="flex items-center justify-between h-16 shrink-0 gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 shadow sticky top-0 bg-white z-999 px-4">
+                <header className="flex items-center justify-between h-16 shrink-0 gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 shadow sticky top-0 dark:bg-black bg-white z-999 px-4">
                     <div className="flex items-center gap-2">
                         <SidebarTrigger className="-ml-1" />
                         <Separator
@@ -86,7 +87,8 @@ export default function DashboardLayout() {
                             </BreadcrumbList>
                         </Breadcrumb>
                     </div>
-                    <div>
+                    <div className="flex items-center gap-2">
+                        <ModeToggle />
                         <DropdownMenu modal={false}>
                             <DropdownMenuTrigger asChild>
                                 <Button variant="outline" aria-label="Open menu" size="icon-sm">
