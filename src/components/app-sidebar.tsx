@@ -28,7 +28,7 @@ const data = {
     },
     {
       title: "Products",
-      url: "/",
+      url: "/products",
       icon: Box,
       isActive: true,
       items: [

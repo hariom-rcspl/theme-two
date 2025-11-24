@@ -73,7 +73,7 @@ export default function Categories() {
                   {/* Image wrapper */}
                   <div className="relative w-24 h-24">
                     <img
-                      src={imagePreview || "/black-tshirt.png"}
+                      src={imagePreview || "/user-placeholder.png"}
                       alt="Preview"
                       className="w-24 h-24 rounded-sm object-cover"
                     />
